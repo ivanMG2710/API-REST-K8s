@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mi-api-ice
+  labels:
+    app: mi-api-ice
+spec:
+  selector:
+    app: mi-api-ice
+  ports:
+  - port: 80
+    targetPort: 8080
+    name: http
+  type: LoadBalancer
